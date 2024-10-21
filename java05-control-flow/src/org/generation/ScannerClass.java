@@ -31,15 +31,15 @@ public class ScannerClass {
 		 * Buffer: Memoria temporal donde se almacenan los datos
 		 * de entrada antes de ser procesados.
 		 */
-		String nombre = sc.nextLine(); // Lee una línea de texto
+		//String nombre = sc.nextLine(); // Lee una línea de texto
 		
-		System.out.println("Te llamas " + nombre);
-		System.out.println("N. de letras en tu nombre: " + nombre.length() );
+		//System.out.println("Te llamas " + nombre);
+		//System.out.println("N. de letras en tu nombre: " + nombre.length() );
 		
 		// Pregunta la ciudad donde se vive e imprime en consola
-		System.out.println("Escribe si vives en un lugar planito o rocoso: ");
-		String vivienda = sc.nextLine();
-		System.out.println("Genial, vives en un lugar que es: " + vivienda);
+		// System.out.println("Escribe si vives en un lugar planito o rocoso: ");
+		//String vivienda = sc.nextLine();
+		// System.out.println("Genial, vives en un lugar que es: " + vivienda);
 		
 		/*
 		 *  Método next()
@@ -47,18 +47,47 @@ public class ScannerClass {
 		 *  Detiene la lectura cuado encuentra un espacio, salto de línea 
 		 *  o tabulación
 		 */
-		 System.out.println("Escribe el nombre y apellido de un familar: ");
+		 /*System.out.println("Escribe el nombre y apellido de un familar: ");
 		 String firstName = sc.next();
 		 String lastName = sc.next();
 		 System.out.println("N. de caracteres en nombre: " + firstName.length() );
 		 System.out.println("N. de caracteres en apellido: " + lastName.length() );
 		 System.out.println(firstName+lastName);
-		 
+		 */
 		 System.out.print("Escribe el nombre de tu mascota: ");
 		 String mascota = sc.next();
 		 System.out.println("Apapachos a " + mascota);
 		
-		sc.close(); // Cerrar el objeto y liberar los recursos asociados
+		 System.out.println("Escribe tu edad: ");
+		 int edad = sc.nextInt(); // leer un número entero
+		 System.out.println("Tu edad : " + edad);
+		 
+		 System.out.println("Escribe la edad de tu mascota: ");
+		 int edadMascota = sc.nextInt(); // leer un número entero
+		 /*
+		  * Se recomienda usar nextLine() adicional para
+		  * capturar el salto de línea que quedó tras la entrada de nextLine()
+		  */
+		 sc.nextLine(); // limpiamos el buffer
+		 System.out.println("La edad de tu mascota: " + edadMascota);
+		 
+		 System.out.println("Tienes frio  s/n ?");
+		 String respuesta = sc.nextLine();
+		 System.out.println("Tu respuesta es: " + respuesta);
+		 
+		 System.out.println("Ingresa tu num de cohorte: ");
+		 if( sc.hasNextInt()  ) {
+			 int numCohorte = sc.nextInt();
+			 System.out.println("Chido por la ch " + numCohorte);
+		 } else {
+			 System.out.println("Usuario no sigue instrucciones");
+		 }
+		 sc.nextLine();
+		 
+		 
+			 
+		 
+		 sc.close(); // Cerrar el objeto y liberar los recursos asociados
 		
 
 	}
