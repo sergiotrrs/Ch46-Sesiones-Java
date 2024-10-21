@@ -32,18 +32,11 @@ public class Casting {
 		//_____________________
 		short calificacion = 131;
 		byte puntos = (byte)calificacion;
-		System.out.println("Valor puntos:" + puntos);
+		System.out.println("Valor puntos:" + puntos); // -125
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		// En la conversión explícita es importante tener en cuenta
+		// que puede haber pérdida de datos si el tipo de destino
+		// no puede alamcenar todas la información del tipo original.
 		
 		
 		
