@@ -1,5 +1,7 @@
 package org.generation;
 
+import java.util.Scanner;
+
 public class ConditionalIf {
 
 	public static void main(String[] args) {
@@ -65,6 +67,25 @@ public class ConditionalIf {
 						"Felicidades! estás en el rango" : 
 							"Fuera De Rango"
 							);
+		
+		// --------------------------------------------------------------
+		// -------------- Clase Scaner --------------------------------
+		int edad;
+		String nombre;
+		Scanner sc;
+		
+		/*
+		 *  
+		 *  npm (Node Package Manager)
+		 *   - Instala, actualiza y gestiona dependencias
+		 *  npx (Node Package eXecute)
+		 *   - Permite ejecutar comandos directamente 
+		 *    desde paquetes sin necesidad de instalarlos globalmente
+		 *   
+		 * 
+		 */
+		
+		
 
 	}
 
