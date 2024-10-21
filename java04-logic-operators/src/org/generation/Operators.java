@@ -46,6 +46,32 @@ public class Operators {
 		double divisionDouble = (double)opA / opB; // 0.83
 		System.out.println( divisionDouble ); // 0.8333333333333334
 		
+		/*
+		 * Java tiene varios tipos de datos numéricos para 
+		 * optimizar el uso de memoria y mejorar el rendimiento, 
+		 * ofreciendo flexibilidad para elegir el tipo adecuado 
+		 * según el contexto y las necesidades del programa.
+		 * 
+		 * En ciclos o en bloques de código donde se realizan 
+		 * muchas operaciones repetitivas, como iteraciones, 
+		 * es recomendable usar tipos como int para evitar 
+		 * conversiones innecesarias entre tipos y así 
+		 * mejorar el rendimiento.
+		 * 
+		 */
+		/*
+		byte interes = 10;
+		
+		for (int i = 0; i < 1000; i++) {
+			short resultado = (short)(50 * interes);			
+
+		}*/
+		int interes = 10;
+		
+		for (int i = 0; i < 1000; i++) {
+			int resultado = 50 * interes;			
+		}
+		
 		
 		
 	}
