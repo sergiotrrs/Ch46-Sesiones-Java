@@ -23,7 +23,9 @@ public class Season {
 
 		System.out.println("Escribe un mes (ejemplo: Enero, Febrero, Marzo, etc.) ");
 
-		// Parametrizar la entrada con .toLowerCase()
+		// Cuando normalizas una entrada, haces que sea más fácil 
+		// comparar cadenas sin tener que preocuparte por las 
+		// diferencias de capitalización. Se puede usar .toLowerCase()
 		String mes = sc.nextLine(); // Lee un texto
 
 		switch (mes) {
