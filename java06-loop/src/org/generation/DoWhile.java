@@ -2,20 +2,21 @@ package org.generation;
 
 import java.util.Scanner;
 
-public class WhileAndDoWhile {
+public class DoWhile {
 
 	public static void main(String[] args) {
 		/**
-		 * Ciclo While
-		 * Mientras la condición sea verdadera, se realiza un nuevo ciclo.
+		 * Ciclo Do-While
+		 * Ejecuta un bloque de código al menos una vez
+		 * antes de evaluar la condición.
 		 * 
 		 * Sintaxis:
 		 *     
-		 *     while( condicion ) instruccion;
+		 *    do {
+		 *    
+		 *     Instrucciones;
 		 *     
-		 *     while( condicion ) {
-		 *        instrucciones;
-		 *     }
+		 *    } while (condición);
 		 * 
 		 */
 		
@@ -29,18 +30,21 @@ public class WhileAndDoWhile {
 		Scanner sc = new Scanner( System.in);
 		
 		boolean isActive = false;
-		
-		while( isActive ) {
+
+		do {
 			System.out.println("Bienvenida a mi programa");
 			System.out.print("Quieres seguir activa (s/n)? ");
 			
 			// normalizar la respuesta
 			char response = sc.nextLine().toLowerCase().charAt(0);
 			
-			if( response != 's' && response != 'y' ) {
+			if( response == 's' || response == 'y' ) {
+				isActive = true;
+			} else {
 				isActive = false;
-			}			
-		}
+			}
+				
+		} while ( isActive );
 		
 		System.out.println("Regresa pronto");
 		
