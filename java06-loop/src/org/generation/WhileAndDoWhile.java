@@ -35,9 +35,9 @@ public class WhileAndDoWhile {
 			System.out.print("Quieres seguir activa (s/n)? ");
 			
 			// normalizar la respuesta
-			String response = sc.nextLine().toLowerCase(); 
+			char response = sc.nextLine().toLowerCase().charAt(0);
 			
-			if( response.equals("s") ) {
+			if( response == 's' || response == 'y' ) {
 				isActive = true;
 			} else {
 				isActive = false;
