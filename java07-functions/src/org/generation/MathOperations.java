@@ -65,6 +65,14 @@ public class MathOperations {
 		return sumarNumeros( Double.parseDouble(numA), Double.parseDouble(numB)); 
 	}
 	
+	double sumarNumeros( String numA, double numB ) {
+		return sumarNumeros( Double.parseDouble(numA), numB); 
+	}
+	
+	double sumarNumeros( double numA, String numB ) {
+		return sumarNumeros( numA, Double.parseDouble(numB)); 
+	}
+	
 	/**
 	 * Imprime en consola el resultado de una operación
 	 * @param resultado valor a imprimir
