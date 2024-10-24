@@ -44,6 +44,28 @@ public class MathOperations {
 	}
 	
 	/**
+	 *  Sobrecarga de métodos. (Method overload)
+	 *  Tener múltiples métodos(el la misma clase) con el mismo nombre, 
+	 *  pero diferente lista de parámetros
+	 *  
+	 *  reglas:
+	 *   - El método debe tener el mismo nombre
+	 *   - Debe tener diferente orden en los tipos de parámetros o
+	 *     números de parámetros
+	 *   - No se base en el tipo de retorno. Aunque pueda tener diferente
+	 *     tipo de retorno, se recomienda que sean de tipo compatible.
+	 *   - Puede tener diferentes modificadores de acceso
+	 *  
+	 *  
+	 * @param a operando 1
+	 * @param b operando 2
+	 * @return resultado de la sumatoria
+	 */
+	double sumarNumeros( String numA, String numB ) {
+		return sumarNumeros( Double.parseDouble(numA), Double.parseDouble(numB)); 
+	}
+	
+	/**
 	 * Imprime en consola el resultado de una operación
 	 * @param resultado valor a imprimir
 	 */

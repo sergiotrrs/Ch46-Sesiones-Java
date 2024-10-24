@@ -14,11 +14,12 @@ public class MathOperationsTest {
 	 math1.imprimirResultadoSumatoria(result);
 
 	 // Suma "4" + "10.8" = 14.8 e imprime en consola
-	 double numA = Double.parseDouble("4");
-	 double numB = Double.parseDouble("10.8");	 
-	 result = math1.sumarNumeros( numA, numB );
-//	 result = math1.sumarNumeros("4", "10.8");
-	 math1.imprimirResultadoSumatoria(result);
+	 result = math1.sumarNumeros("4", "10.8");
+	 math1.imprimirResultadoSumatoria(result); // 14.8
+
+	 // Suma "2" + "3" = 5.0 e imprime en consola
+	 result = math1.sumarNumeros(34, 5.4);
+	 math1.imprimirResultadoSumatoria(result); // 14.8
 
 	}
 
