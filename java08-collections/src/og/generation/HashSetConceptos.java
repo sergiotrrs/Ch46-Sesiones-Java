@@ -1,6 +1,8 @@
 package og.generation;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 public class HashSetConceptos {
 
@@ -41,8 +43,37 @@ public class HashSetConceptos {
 		System.out.println("Eliminado Maratón CDmx? " + medallas.remove("Maratón CDmx"));
 		
 		// Iterar la colección, usando for loop enhanced
+		for(String medalla : medallas) {
+			   System.out.println("Medalla: " + medalla);
+		}
 		
-
+		// =============Eliminar duplicados============================
+		ArrayList<String> nombreEtiquetas;
+		nombreEtiquetas = new ArrayList<>();
+		nombreEtiquetas.add("Coca-cola"); 
+		nombreEtiquetas.add("Toxic"); 
+		nombreEtiquetas.add("Vans"); 
+		nombreEtiquetas.add("Disney");
+		nombreEtiquetas.add("Peanuts"); 
+		nombreEtiquetas.add("Mala Racha");
+		nombreEtiquetas.add("Vans"); 
+		nombreEtiquetas.add("Toxic");
+		System.out.println( nombreEtiquetas );
+		
+		// Eliminar los duplicados
+		// HashSet<String> etiquetasNoDuplicadas = new HashSet<>( nombreEtiquetas );
+		HashSet<String> etiquetasNoDuplicadas = new HashSet<>();
+		etiquetasNoDuplicadas.add( "Nike" );
+		etiquetasNoDuplicadas.addAll( nombreEtiquetas );
+		System.out.println( etiquetasNoDuplicadas );
+		
+		//  Eliminar los duplicados, respetando el orden (LinkedHashSet)
+		LinkedHashSet<String> etiquetasNoDuplicadasOrdenadas = new LinkedHashSet<>( nombreEtiquetas );
+		  System.out.println( etiquetasNoDuplicadasOrdenadas );
+		
+		
+		
+		
 	}
 
 }
