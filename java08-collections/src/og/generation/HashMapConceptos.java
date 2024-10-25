@@ -1,6 +1,7 @@
 package og.generation;
 
 import java.util.HashMap;
+import java.util.TreeMap;
 
 public class HashMapConceptos {
 
@@ -48,6 +49,9 @@ public class HashMapConceptos {
 			System.out.println("=Funko: " + nombreFunko );
 		}
 		
+		// Odenar las claves		
+		TreeMap< Integer, String > funkosOrdenados = new TreeMap<>( funkos);
+		System.out.println( funkosOrdenados );
 		
 		
 	}
