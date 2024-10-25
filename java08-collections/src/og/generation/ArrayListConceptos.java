@@ -68,6 +68,24 @@ public class ArrayListConceptos {
 		System.out.println("Vans? " + nombreEtiquetas.contains("Vans"));
 		System.out.println("Cuidado con el perro? " + nombreEtiquetas.contains("Cuidado con el Perro"));
 		
+		// Iterar una colección usando for loop
+		for (int i = 0; i < nombreEtiquetas.size(); i++) {
+			System.out.println("Nombre de las etiquetas: " + nombreEtiquetas.get(i));
+		}
+
+		// Iterar una colección usando for loop enhanced
+		for (String etiqueta : nombreEtiquetas) {
+			System.out.println("Etiqueta: " + etiqueta);
+		}
+		
+		// Reemplazar un elemento, set()
+		nombreEtiquetas.set(0, "Coca-Cola 1989" );
+		System.out.println( nombreEtiquetas );
+		
+		
+		
+		
+		
 		
 
 
