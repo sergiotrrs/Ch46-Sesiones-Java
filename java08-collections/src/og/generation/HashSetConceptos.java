@@ -29,6 +29,19 @@ public class HashSetConceptos {
 		System.out.println("Agregado Bimbo? " + medallas.add( "Bimbo" )); // false
 		
 		System.out.println( medallas );
+		
+		// Obtener el tamaño de la colección, size() 
+		System.out.println( medallas.size() ); // 6
+		
+		// Saber si un elemento existe, contains()
+		System.out.println( "Gatorade? "  + medallas.contains("Gatorade")); // true
+		System.out.println( "Olímpica? "  + medallas.contains("Olímpica")); // false
+		
+		// Remover un elemento, remove()
+		System.out.println("Eliminado Maratón CDmx? " + medallas.remove("Maratón CDmx"));
+		
+		// Iterar la colección, usando for loop enhanced
+		
 
 	}
 
