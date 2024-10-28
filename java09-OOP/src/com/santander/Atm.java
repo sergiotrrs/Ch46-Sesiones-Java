@@ -34,9 +34,21 @@ public class Atm {
 	
 	/* Métodos constructores */
 	
-	/* Métodos de instancia (non-static methods) */
+	/* Métodos de instancia (non-static methods) 
+	 *    <modificarAcceso> <retorno> nombreMétodo( parámetros )
+	 *  Son aquellos que pertenecen a una instancia específica de una clase. 
+	 *  Estos métodos pueden acceder y modificar los atributos de instancia 
+	 *  y son llamados sobre un objeto particular de la clase.  
+	 *    
+	 * */
+	 double deposit( double amount) {
+		 // return balance = balance + amount ;
+		 return balance += amount ;
+	 }
+	
 	
 	/* Métodos de clase (static methods) */
+	
 	
 
 }
