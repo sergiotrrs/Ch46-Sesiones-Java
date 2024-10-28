@@ -33,9 +33,9 @@ public class AtmTest {
 		System.out.println("Cajero01 $ " + cajero01.balance ); // 500_000
 		
 		// Realizar lo mismo para el cajero 02, con depósito de $120_000
-		System.out.println("Cajero02 $ " + cajero02.balance);
-		System.out.println("Más depósito $" + cajero02.deposit(120_000));
-		System.out.println("Cajero02 $ " + cajero02.balance);
+		System.out.println("Cajero02 $ " + cajero02.balance); // 600_000
+		System.out.println("Más depósito $" + cajero02.deposit(120_000) ); // 720_000
+		System.out.println("Cajero02 $ " + cajero02.balance); // 720_000
 		
 		
 
