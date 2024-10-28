@@ -45,9 +45,24 @@ public class Atm {
 		 // return balance = balance + amount ;
 		 return balance += amount ;
 	 }
+	 
+	 double withdraw (double amount) {
+			return balance -= amount ;
+		}
 	
-	
-	/* Métodos de clase (static methods) */
+	/* Métodos de clase (static methods) 
+	 *  	static <modificarAcceso> <retorno> nombreMétodo( parámetros )
+	 *  Método que pertenece a la clase en sí, en lugar de a una instancia 
+	 *  específica de la clase. Esto significa que se puede llamar al método 
+	 *  sin necesidad de crear un objeto de la clase.
+	 *  
+	 * 
+	 * */
+	 static String printBankName() {
+		 return " ==== Bienvenida ==== \\ "
+		 		+ "\nBanco " + bankName;
+	 }
+	 
 	
 	
 

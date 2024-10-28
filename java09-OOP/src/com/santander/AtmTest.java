@@ -41,8 +41,16 @@ public class AtmTest {
 		// para que los cajeros acepten retiros, el 'amount'(retiro) se suma a 'balance'
 		// Mostrar en AtmTest el balance antes y después del retiro
 		// Realizar para cajero01 retiro de $30_000
+		System.out.println(cajero01.balance);
+		System.out.println("Retiro: $" + cajero01.withdraw(30_000)); // 470000.0
+					
 		// Realizar para cajero02 retiro de $70_000
+		System.out.println(cajero02.balance);
+		System.out.println("Retiro: $" + cajero02.withdraw(70_000)); // 650000.0
 		
+		// System.out.println( cajero01.printBankName() );
+		// System.out.println( cajero02.printBankName() );
+		System.out.println( Atm.printBankName() );
 		
 
 	}
