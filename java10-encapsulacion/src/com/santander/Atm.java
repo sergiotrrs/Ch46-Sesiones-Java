@@ -25,5 +25,11 @@ package com.santander;
  * 
  */
 public class Atm {
+	private int serialNumber;
+	private String model;
+	private double balance;
+
+	/** Métodos setters y getters */
+	
 
 }
