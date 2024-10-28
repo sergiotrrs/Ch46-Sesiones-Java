@@ -63,6 +63,10 @@ public class Atm {
 		 		+ "\nBanco " + bankName;
 	 }
 	 
+	 static void printRandomNumber() {
+		 double pi = Math.PI;
+		 System.out.println( Math.random()   );
+	 }
 	
 	
 
