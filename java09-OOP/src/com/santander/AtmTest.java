@@ -28,12 +28,14 @@ public class AtmTest {
 		System.out.println( Atm.bankName ); // Santander
 		
 		// Imprimir el balance de cajero 01, depositar $50_000, y mostrar el nuevo balance
-		System.out.println("Cajero01 $: " + cajero01.balance ); // 450_000
+		System.out.println("Cajero01 $ " + cajero01.balance ); // 450_000
 		cajero01.deposit(50_000);
-		System.out.println("Cajero01 $: " + cajero01.balance ); // 500_000
+		System.out.println("Cajero01 $ " + cajero01.balance ); // 500_000
 		
 		// Realizar lo mismo para el cajero 02, con depósito de $120_000
-		
+		System.out.println("Cajero02 $ " + cajero02.balance);
+		System.out.println("Más depósito $" + cajero02.deposit(120_000));
+		System.out.println("Cajero02 $ " + cajero02.balance);
 		
 		
 
