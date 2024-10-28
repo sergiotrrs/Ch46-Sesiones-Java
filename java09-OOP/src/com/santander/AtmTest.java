@@ -37,6 +37,12 @@ public class AtmTest {
 		System.out.println("Más depósito $" + cajero02.deposit(120_000) ); // 720_000
 		System.out.println("Cajero02 $ " + cajero02.balance); // 720_000
 		
+		// Realizar la implementación en la clase Atm, del método withdraw()
+		// para que los cajeros acepten retiros, el 'amount'(retiro) se suma a 'balance'
+		// Mostrar en AtmTest el balance antes y después del retiro
+		// Realizar para cajero01 retiro de $30_000
+		// Realizar para cajero02 retiro de $70_000
+		
 		
 
 	}
