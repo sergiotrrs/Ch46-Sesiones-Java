@@ -40,8 +40,14 @@ public class CatTest {
 		// objetos de tipo Cat, tessa es de tipo Dog
 		// losPintitos.add( tessa );
 			
-		// Mostrar los gatos que se porción sea mayor o igual a 3
+		// Mostrar los gatos que su porción sea mayor o igual a 3
 	    // imprimir en consola
+		System.out.println("Gatos con porción sea mayor o igual a 3:");
+        for (Cat gato : losPintitos) {
+            if (gato.food >= 3) {
+            	System.out.println( gato );
+            }
+        }
 		
 
 	}
