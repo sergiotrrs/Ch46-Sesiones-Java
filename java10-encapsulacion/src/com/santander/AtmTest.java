@@ -14,7 +14,11 @@ public class AtmTest {
 		cajero01.setModel("T-800");
 		System.out.println("N.Modelo cajero01: " + cajero01.getModel() ); // null
 		
+		System.out.println(cajero01.getBalance());
+		cajero01.setBalance(350_000);
+		System.out.println(cajero01.getBalance());
 		
+		System.out.println( cajero01 );
 
 	}
 

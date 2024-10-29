@@ -34,20 +34,46 @@ public class Atm {
 	 *  <ModificadorAcceso> <retorno> setNombreDelAtributo( parámetros )
 	 * */
 	public int getSerialNumber() {
-		return serialNumber;
+		return this.serialNumber;
 	}
 	
 	public void setModel( String newModel ) {
-		model = newModel;
+		this.model = newModel;
 	}
 	
 	public String getModel() {
-		return model;
+		return this.model;
 	}
 	
 	// Realizar el setter y getter de balance
 	
+	/**
+	 *  Es común que en los setters el parámetro tenga el 
+	 *  mismo nombre que el atributo que establece para 
+	 *  mantener consistencia, legibilidad y claridad en 
+	 *  el código. Esto ayuda a identificar fácilmente 
+	 *  cuál es el atributo de la clase y cuál es el 
+	 *  valor que estamos pasando para actualizarlo.
+	 *  
+	 *  Para diferenciar entre el parámetro y el atributo, 
+	 *  en Java se utiliza la palabra clave this. 
+	 *  this hace referencia al contexto actual de la 
+	 *  instancia de la clase, permitiendo distinguir 
+	 *  el atributo de instancia del parámetro del método.
+	 */
+	public double setBalance(double balance) {
+		return this.balance = balance;
+	}
 	
+	public double getBalance() {
+		return this.balance;
+	}
+	
+	public String toString() {
+		return "Serial number: " + this.serialNumber +
+				" , model: " + this.model +
+				" , balance: " + this.balance;
+	}
 	
 
 }
