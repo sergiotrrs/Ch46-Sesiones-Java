@@ -19,6 +19,14 @@ public class AtmTest {
 		System.out.println(cajero01.getBalance());
 		
 		System.out.println( cajero01 );
+		
+		// Crear cajero02 con valores,serie: 2, modelo: T-1000, 600_000
+		Atm cajero02 = new Atm();
+		// cajero02.setSerialNumber(2);
+		cajero02.setModel("T-1000");	
+		cajero02.setBalance(600_000);
+		System.out.println(cajero02);
+		
 
 	}
 

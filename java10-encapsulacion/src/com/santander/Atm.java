@@ -28,6 +28,30 @@ public class Atm {
 	private int serialNumber;
 	private String model;
 	private double balance;
+	
+	/* Métodos constructores
+	 *  Un constructor es un tipo especial de método que se llama automáticamente
+	 *  cuando se crea una instancia(objeto) de una clase. Su propósito principal
+	 *  es inicializar el estado de un objeto recién creado.
+	 *  
+	 *  Reglas:
+	 *  - El nombre del constructor debe ser el mismo que el de la clase.
+	 *  - Un constructor no tiene retorno.
+	 *  - Un constructor puede llamar a otro constructor de la misma clase usando
+	 *  	la palabra this(). Esta llamada debe ser la primera instrucción del constructor.
+	 *  - Es posible tener una sobrecar de constructores.
+	 *  - Constructor por default: Si no se proporciona un constructor en la clase, Java
+	 *  	proporciona un constructor por defecto sin parámetros.
+	 */
+	 Atm(){
+		 
+	 }
+	
+	 Atm(String model, double balance) {
+		 this.model = model;
+		 this.balance = balance;		
+	}
+	
 
 	/** Métodos setters y getters
 	 *  Convención para el nombre de los métodos: 
