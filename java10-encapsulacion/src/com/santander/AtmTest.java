@@ -27,6 +27,11 @@ public class AtmTest {
 		cajero02.setBalance(600_000);
 		System.out.println(cajero02);
 		
+		// Crear cajero03, con calores: modelo: T-800, 200_000
+		Atm cajero03 = new Atm("T-800", 200_000);
+		System.out.println( cajero03 );
+		
+		
 
 	}
 
