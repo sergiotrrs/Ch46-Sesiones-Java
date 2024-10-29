@@ -29,7 +29,25 @@ public class Atm {
 	private String model;
 	private double balance;
 
-	/** Métodos setters y getters */
+	/** Métodos setters y getters
+	 *  Convención para el nombre de los métodos: 
+	 *  <ModificadorAcceso> <retorno> setNombreDelAtributo( parámetros )
+	 * */
+	public int getSerialNumber() {
+		return serialNumber;
+	}
+	
+	public void setModel( String newModel ) {
+		model = newModel;
+	}
+	
+	public String getModel() {
+		return model;
+	}
+	
+	// Realizar el setter y getter de balance
+	
+	
 	
 
 }
