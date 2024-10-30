@@ -1,6 +1,8 @@
 package org.generation.shapes;
 
-public class Square extends TwoDimensionalShape {
+import org.generation.util.Draw;
+
+public class Square extends TwoDimensionalShape implements Draw {
 	
 	public Square(String name, double side ) {
 		super(name, side, side);
@@ -28,6 +30,11 @@ public class Square extends TwoDimensionalShape {
 	@Override
 	public double getArea() {
 			return super.getWidth() * super.getHeight();
+	}
+
+	@Override
+	public void draw() {
+		System.out.println("Soy " + super.getName() + " y me voy a dibujar");		
 	}
 	
 

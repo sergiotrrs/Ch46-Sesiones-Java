@@ -10,6 +10,7 @@ public class SquareTest {
 		System.out.println("Area:" + cuadrito.getArea() );
 		System.out.println("Perìmetro:" + cuadrito.getPerimeter() );
 		System.out.println("Lado:" + cuadrito.getWidth() );
+		cuadrito.draw();
 		
 		/*
 		 * Generar la clase concreta de trìangulo
