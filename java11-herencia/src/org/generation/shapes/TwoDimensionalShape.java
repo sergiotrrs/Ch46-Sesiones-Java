@@ -12,6 +12,35 @@ package org.generation.shapes;
  *  que puede utilizarlos como si fueran 
  *  parte de la propia subclase.
  */
-public class TwoDimensionalShape {
+abstract public class TwoDimensionalShape extends Shape {
+	
+	private double width;
+	private double height;
+	
+	protected TwoDimensionalShape(String name, double width, double height) {
+		super(name);
+		this.width = width;
+		this.height = height;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+	
+	abstract public double getPerimeter();
+	
+	
 
 }
