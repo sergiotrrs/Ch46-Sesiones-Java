@@ -33,16 +33,29 @@ abstract public class Shape {
 	public void setName(String name) {
 		this.name = name;
 	}
-
+	
+	/*
+	 *  @Override: Anotación que indica que el método está sobreescribiendo
+	 *  el comportamiento de una método de la clase heredada.
+	 *  Su propósito es hacer una validación en tiempo de
+	 *  compilación para asegurarse que la subclase está
+	 *  sobreescribiendo correctamente y coincide
+	 *  con la firma del método.
+	 */	 
 	@Override
 	public String toString() {
 		return "Shape [name=" + name + "]";
 	}
 	
-	
-	
-	
-	
-	
+	/**
+	 *  Un método abstracto no tiene implementación, solo
+	 *  la definción del método.
+	 *  Termina con punto y coma.
+	 *  
+	 *  Si tienes un método abstracto, tienes la obligación
+	 *  de hacer tu clase abstracta.
+	 */
+	abstract public double getArea();
+		
 
 }
