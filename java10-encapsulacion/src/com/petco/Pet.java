@@ -2,11 +2,19 @@ package com.petco;
 
 class Dog {
 	
-	String name = "Solovino";	
-	{ // bloque de inicialización de atributos non-static
-		this.name = "Firulais";		
+	String name = "Solovino";
+	int serialNumber;
+	static int counter = 1;
+		
+	{ // bloque de inicialización de non-static fields
+		this.name = "Firulais";
+		this.serialNumber = ++counter;
 	}
 	
+	static { // bloque de inicialización de static fields
+		counter = 100;
+	}
+		
 	Dog(){	}
 	
 	Dog( String name){
