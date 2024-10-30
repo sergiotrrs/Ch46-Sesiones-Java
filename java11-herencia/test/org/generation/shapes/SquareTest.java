@@ -14,6 +14,19 @@ public class SquareTest {
 		
 		System.out.println( cuadrito.printResultArea() );
 		
+		Shape cuadro2 = new Square("Cuado2", 50 );
+		System.out.println( cuadro2.getArea()  );
+		
+		if( cuadro2 instanceof Square ) {
+			// Down Casting
+			System.out.println( ((Square)cuadro2).getPerimeter() );			
+		}
+		
+		
+		
+		
+		
+		
 		/*
 		 * Generar la clase concreta de trìangulo
 		 *  - Calcular el àrea y perìmetro
