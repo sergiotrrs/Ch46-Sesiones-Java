@@ -37,5 +37,10 @@ public class Square extends TwoDimensionalShape implements Draw {
 		System.out.println("Soy " + super.getName() + " y me voy a dibujar");		
 	}
 	
+	@Override
+	public String printResultArea() {
+		return "El area de " + super.getName() + " es igual a " + this.getArea();
+	}
+	
 
 }

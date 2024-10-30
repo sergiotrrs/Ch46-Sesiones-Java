@@ -12,6 +12,8 @@ public class SquareTest {
 		System.out.println("Lado:" + cuadrito.getWidth() );
 		cuadrito.draw();
 		
+		System.out.println( cuadrito.printResultArea() );
+		
 		/*
 		 * Generar la clase concreta de trìangulo
 		 *  - Calcular el àrea y perìmetro

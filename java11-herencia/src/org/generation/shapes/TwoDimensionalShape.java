@@ -41,6 +41,9 @@ abstract public class TwoDimensionalShape extends Shape {
 	
 	abstract public double getPerimeter();
 	
+	public String printResultArea() {
+		return "El área pronto lo sabremos";
+	}
 	
 
 }
