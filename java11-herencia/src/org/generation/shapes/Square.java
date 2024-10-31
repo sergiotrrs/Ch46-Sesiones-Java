@@ -42,5 +42,15 @@ public class Square extends TwoDimensionalShape implements Draw {
 		return "El area de " + super.getName() + " es igual a " + this.getArea();
 	}
 	
+	@Override
+	public void setWidth(double width) {
+		super.setWidth(width);
+		super.setHeight(width);
+	}
+	
+	@Override
+	public void setHeight(double height) {
+		this.setWidth(height);
+	}
 
 }
