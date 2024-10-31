@@ -67,5 +67,25 @@ class SquareJUnitTest {
 		assertEquals( 320, square.getPerimeter(), "Perímetro debe ser 320" );		
 	}
 	
+	@Test
+	@DisplayName("Calcular el área y perímetro con decimales")
+	void areaYPerimetroConDecimales() {
+		Square square = new Square("MySquare", 5.01 );
+		assertEquals( 5.01 , square.getHeight(), "La altura debe ser 5.01");
+		assertEquals( 5.01 , square.getWidth(), "El ancho debe ser 5.01");
+		assertEquals( 25.1001 , square.getArea(), 0.002, "Área debe ser 25.1001" ); 
+		assertEquals( 20.04, square.getPerimeter(),0.002, "Perímetro debe ser 20.04" );
+		
+	}
+	
+	/*
+	 *  BigDecimal es una clase en Java utilizada para realizar 
+	 *  operaciones aritméticas de alta precisión con números decimales. 
+	 *  Es especialmente útil en aplicaciones financieras o científicas 
+	 *  donde la precisión es crucial, ya que evita los errores de 
+	 *  redondeo que ocurren al usar float o double.
+	 */
 
+	
+	
 }
