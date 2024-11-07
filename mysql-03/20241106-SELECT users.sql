@@ -56,6 +56,28 @@ SELECT * FROM users;
 SELECT firstname, DATEDIFF( CURDATE(), birthdate ) AS "días" FROM users;
 
 -- Filtrar a las personas que cumplen años en el mes siguiente
--- 
+SELECT firstname, birthdate, MONTH(birthdate) FROM users;
 
+-- Mostrar las personas que su cumpleaños sea en noviembre
+SELECT 
+	firstname, birthdate, MONTH(birthdate) 
+    FROM users
+    WHERE MONTH(birthdate) = 9;
+    
+-- Mostrar las personas que se cumpleaños sea el próximo mes
+SELECT 
+	firstname, birthdate, MONTH(birthdate) 
+    FROM users
+    WHERE MONTH(birthdate) = MONTH(CURDATE() + INTERVAL 1 MONTH );
+    
+-- Buscar una fecha específica
+SELECT * FROM users WHERE birthdate = "2000-09-14";
+
+-- Buscar a todas las personas que su fecha de nacimiento sea el 14
+SELECT * FROM users
+	WHERE DAY(birthdate) = "14";
+    
+-- Buscar a todas las personas que seal del año 2000 y mes septiembre
+select * from users 
+	where year(birthdate) = 2000 and month(birthdate) = 9;
 
