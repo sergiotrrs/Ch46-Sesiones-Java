@@ -80,7 +80,14 @@ public class SetUp implements CommandLineRunner {
 	      productRepository.save( new Product("Crema", 458.25) );
 	      productRepository.save( new Product("Helado", 67.25) );
 	      productRepository.save( new Product("Jabón Zote", 10.50) );
+	      productRepository.save( new Product("Bicleta 22 pulgadas", 1900.52) );
+	      productRepository.save( new Product("Jabón Ariel", 40.50) );
+	      
+	      List<Product> products = productRepository.findByPriceGreaterThanEqual(100.00);
 	   
+	      for(Product product : products ) {
+	    	  System.out.println( product );
+	      }
 		
 	}
 
