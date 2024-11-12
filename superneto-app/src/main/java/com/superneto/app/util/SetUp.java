@@ -1,5 +1,8 @@
 package com.superneto.app.util;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
@@ -22,12 +25,52 @@ public class SetUp implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-	      // save a few customers
+		  // Creación de clientes
 	      repository.save(new Customer("Jack", "Bauer"));
 	      repository.save(new Customer("Chloe", "O'Brian"));
 	      repository.save(new Customer("Kim", "Bauer"));
 	      repository.save(new Customer("David", "Palmer"));
 	      repository.save(new Customer("Michelle", "Dessler"));
+	      repository.save(new Customer("Estef", "Contreras", "stef@gmail.com"));
+	      
+	      // Recuperando todos los clientes
+	      List<Customer> customers = (List<Customer>) repository.findAll();
+	      
+	      // Imprimiendo los clientes recuperados
+	      for(Customer customer : customers ) {
+	    	  System.out.println(customer);
+	      }
+	      
+	      // Recuperar un cliente por su  id
+	       Customer cliente1 = repository.findById(2);
+	       System.out.println( cliente1 ); // Chole
+	       
+	      // Recuperar un cliente por su email
+	      Optional<Customer> optionalCustomer = repository.findByEmail("stef@gmail.com");
+	      if( optionalCustomer.isPresent()) {
+	    	  Customer stef = optionalCustomer.get();
+	    	  System.out.println( stef );
+	    	  // Modificar un cliente
+	    	  stef.setFirstName("Estefany");
+	    	  repository.save(stef); // update
+	    	  
+	      } else {
+	    	  System.out.println("El usuario no existe");
+	      }
+	      
+	      // Eliminar un registo
+	      repository.deleteById(2L); // Se elimina a Chole
+	      
+	      
+	      // Recuperando todos los clientes
+	      List<Customer> customersModificados = (List<Customer>) repository.findAll();
+	      
+	      // Imprimiendo los clientes recuperados
+	      for(Customer customer : customersModificados ) {
+	    	  System.out.println(customer);
+	      }
+	      
+	   
 		
 	}
 
