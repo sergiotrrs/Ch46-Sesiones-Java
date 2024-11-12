@@ -23,14 +23,20 @@ public class Customer {
 	// Indica como se generará automáticamente las claves primarias
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	private String fistName;
+	private String firstName;
 	private String lastName;
+	private String email;
 	
 	protected Customer() {}
 
-	protected Customer(String fistName, String lastName) {		
-		this.fistName = fistName;
+	public Customer(String firstName, String lastName) {		
+		this.firstName = firstName;
 		this.lastName = lastName;
+	}
+	
+	public Customer(String firstName, String lastName, String email) {
+		this(firstName, lastName);
+		this.email = email;
 	}
 
 	public Long getId() {
@@ -41,12 +47,12 @@ public class Customer {
 		this.id = id;
 	}
 
-	public String getFistName() {
-		return fistName;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFistName(String fistName) {
-		this.fistName = fistName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
 	public String getLastName() {
@@ -56,10 +62,18 @@ public class Customer {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", fistName=" + fistName + ", lastName=" + lastName + "]";
+		return "Customer [id=" + id + ", fistName=" + firstName + ", lastName=" + lastName + "]";
 	}
 	
 	
