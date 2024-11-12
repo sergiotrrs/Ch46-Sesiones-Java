@@ -6,9 +6,12 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 import com.superneto.app.model.Customer;
+import com.superneto.app.model.Product;
 import com.superneto.app.repository.CustomerRepository;
+import com.superneto.app.repository.ProductRepository;
 
 /**
 * CommandLineRunner es una interfaz en Spring Boot que se 
@@ -18,10 +21,13 @@ import com.superneto.app.repository.CustomerRepository;
 * cuando se arranca la aplicación.
 */
 @Configuration
+@Profile("devH2")
 public class SetUp implements CommandLineRunner {
 	
 	@Autowired
 	CustomerRepository repository;
+	@Autowired
+	ProductRepository productRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -70,6 +76,10 @@ public class SetUp implements CommandLineRunner {
 	    	  System.out.println(customer);
 	      }
 	      
+	      // =============== Productos ======================
+	      productRepository.save( new Product("Crema", 458.25) );
+	      productRepository.save( new Product("Helado", 67.25) );
+	      productRepository.save( new Product("Jabón Zote", 10.50) );
 	   
 		
 	}
