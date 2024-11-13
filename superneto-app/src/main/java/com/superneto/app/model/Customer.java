@@ -27,6 +27,12 @@ public class Customer {
 	private String lastName;
 	private String email;
 	private boolean active;
+	/*
+	@ManyToOne
+	private Role role;
+	@OneToMany
+	private Set<Address> addresses;
+	*/
 	
 	protected Customer() {}
 

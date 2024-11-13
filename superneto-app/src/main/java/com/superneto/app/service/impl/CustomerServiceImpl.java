@@ -51,6 +51,8 @@ public class CustomerServiceImpl implements CustomerService {
 	public Customer createCustomer(Customer customer) {
 		// TODO Verificar si existe el email
 		// TODO Verificar si los atributos son válidos
+		customer.setActive(true); // activar cliente
+		customer.setId(null); // forzar la creación del cliente		
 		Customer newCustomer = customerRepository.save( customer );
 		return newCustomer;
 	}
