@@ -2,6 +2,7 @@ package com.superneto.app.repository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.data.repository.CrudRepository;
 
@@ -62,8 +63,9 @@ public interface CustomerRepository extends CrudRepository<Customer, Long> {
 	// Sobrecarga de método, existe un método en CRUDRepository
 	// Optional<Customer> findById(Long id);
 	Customer findById(long id);
+	// Set<Customer> findAllByActive(boolean status);
+	Set<Customer> findAllByActiveTrue();
+	Set<Customer> findAllByActiveFalse();
 	
 	
-	
-
 }

@@ -68,27 +68,40 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public Customer getCustomerByEmail(String email) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Customer> optionalCustomer = customerRepository.findByEmail(email);
+		if( optionalCustomer.isEmpty()) {
+			throw new IllegalStateException("Customer does not exist with email " + email);
+		}
+		return optionalCustomer.get();
 	}
 
 	@Override
 	public Set<Customer> getAllUsers(boolean isActive) {
-		// TODO Auto-generated method stub
-		// Envia mal los datos
-		return null;
+		Set<Customer> customers;
+		if( isActive ) {
+			customers = customerRepository.findAllByActiveTrue();
+		} else {
+			customers = customerRepository.findAllByActiveFalse();
+		}
+		return customers;
 	}
 
 	@Override
 	public Customer updateCustomer(Customer customer, Long id) {
-		// TODO Auto-generated method stub
-		return null;
+		// TODO verificar los nuevos atributos a cambiar
+		Customer existingCustomer = getCustomerById(id);
+		existingCustomer.setFirstName( customer.getFirstName() );
+		existingCustomer.setLastName( customer.getLastName() );
+		// ID y email no se permite modificar
+		return customerRepository.save(existingCustomer);
 	}
 
 	@Override
 	public void deleteCustomer(Long id) {
-		// TODO Auto-generated method stub
-		
+		Customer existingCustomer = getCustomerById(id);
+		// customerRepository.delete(existingCustomer);
+		existingCustomer.setActive(false); // desactivar al usuario
+		customerRepository.save(existingCustomer);
 	}
 
 }

@@ -26,6 +26,7 @@ public class Customer {
 	private String firstName;
 	private String lastName;
 	private String email;
+	private boolean active;
 	
 	protected Customer() {}
 
@@ -69,6 +70,14 @@ public class Customer {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 
 	@Override
