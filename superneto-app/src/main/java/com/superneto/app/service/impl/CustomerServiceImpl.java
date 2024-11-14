@@ -1,11 +1,13 @@
 package com.superneto.app.service.impl;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.superneto.app.model.Customer;
 import com.superneto.app.repository.CustomerRepository;
 import com.superneto.app.service.CustomerService;
@@ -57,7 +59,8 @@ public class CustomerServiceImpl implements CustomerService {
 		}
 		// TODO Verificar si los atributos son válidos
 		customer.setActive(true); // activar cliente
-		customer.setId(null); // forzar la creación del cliente		
+		customer.setId(null); // forzar la creación del cliente	
+		customer.setCreatedAt(LocalDateTime.now());
 		Customer newCustomer = customerRepository.save( customer );
 		return newCustomer;
 	}
@@ -99,6 +102,7 @@ public class CustomerServiceImpl implements CustomerService {
 		Customer existingCustomer = getCustomerById(id);
 		existingCustomer.setFirstName( customer.getFirstName() );
 		existingCustomer.setLastName( customer.getLastName() );
+		existingCustomer.setBirthDate( customer.getBirthDate() );
 		// ID y email no se permite modificar
 		return customerRepository.save(existingCustomer);
 	}

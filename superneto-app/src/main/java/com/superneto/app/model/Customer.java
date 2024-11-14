@@ -1,5 +1,8 @@
 package com.superneto.app.model;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,6 +30,8 @@ public class Customer {
 	private String lastName;
 	private String email;
 	private boolean active;
+	private LocalDate birthDate;
+	private LocalDateTime createdAt;
 	/*
 	@ManyToOne
 	private Role role;
@@ -84,6 +89,22 @@ public class Customer {
 
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+	
+	public LocalDate getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(LocalDate birthDate) {
+		this.birthDate = birthDate;
+	}
+	
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
 	}
 
 	@Override

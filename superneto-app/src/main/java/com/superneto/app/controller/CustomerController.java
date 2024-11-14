@@ -5,6 +5,7 @@ import java.util.Set;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,7 +45,13 @@ import com.superneto.app.service.CustomerService;
  *  A nivel de clase define el prefijo común de la URL para todas
  *  las rutas de los métodos.
  *  
+ *  @CrossOrigin(origins = "*") en Spring Boot se utiliza para 
+ *  habilitar el CORS (Cross-Origin Resource Sharing), lo que 
+ *  permite que tu aplicación acepte solicitudes desde cualquier 
+ *  origen externo.
+ *  
  */
+@CrossOrigin(origins = "*")
 @Controller
 @ResponseBody
 // @RestController
