@@ -2,10 +2,13 @@ package com.superneto.app.controller;
 
 import java.util.Set;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -101,13 +104,25 @@ public class CustomerController {
 	 * instancia de una clase Java que se puede utilizar en el 
 	 * método del controlador.
 	 * 
+	 * La clase ResponseEntity en Spring es una estructura 
+	 * para definir y controlar la respuesta HTTP de un controlador 
+	 * REST. Te permite personalizar aspectos como el código de 
+	 * estado HTTP, los encabezados y el cuerpo de la respuesta.
+	 * 
 	 */
 	@PostMapping // http:localhost:8080/api/v1/customers
-	Customer createCustomer(@RequestBody Customer newCustomer) {
+	ResponseEntity<Customer> createCustomer(@RequestBody Customer newCustomer) {
 	   Customer registeredCustomer = customerService.createCustomer(newCustomer);
-	   return registeredCustomer;
+	   //return new ResponseEntity<>(registeredCustomer, HttpStatus.CREATED);
+	   return ResponseEntity.status(201).body(registeredCustomer);
 	}
 	
+	
+	@PutMapping("{id}") // http:localhost:8080/api/v1/customers/{id}
+	ResponseEntity<Customer> updateCustomer(@PathVariable("id") Long id ,@RequestBody Customer customer) {
+		Customer updatedCustomer = customerService.updateCustomer(customer, id);
+		return ResponseEntity.ok(updatedCustomer);
+	}
 	
 
 }
