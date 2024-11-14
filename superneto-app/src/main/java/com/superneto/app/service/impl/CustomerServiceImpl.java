@@ -4,6 +4,7 @@ import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.superneto.app.model.Customer;
 import com.superneto.app.repository.CustomerRepository;
@@ -37,6 +38,7 @@ import com.superneto.app.service.CustomerService;
 *  
 *  Bean: Es un objeto administrado por el contenedor de Spring.
  */
+@Service
 public class CustomerServiceImpl implements CustomerService {
 	
 	// @Autowired 1era forma de inyección de dependencia
