@@ -5,6 +5,8 @@ import java.util.Set;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -89,6 +91,23 @@ public class CustomerController {
 			){
 		return customerService.getAllUsers(active);
 	}
+	
+	/**
+	 * La anotación @RequestBody en Spring MVC se utiliza para 
+	 * vincular automáticamente el cuerpo de una solicitud HTTP 
+	 * a un objeto en un método de controlador. Esta anotación 
+	 * permite que los datos JSON (o XML) enviados en el cuerpo 
+	 * de la solicitud se deserialicen y se conviertan en una 
+	 * instancia de una clase Java que se puede utilizar en el 
+	 * método del controlador.
+	 * 
+	 */
+	@PostMapping // http:localhost:8080/api/v1/customers
+	Customer createCustomer(@RequestBody Customer newCustomer) {
+	   Customer registeredCustomer = customerService.createCustomer(newCustomer);
+	   return registeredCustomer;
+	}
+	
 	
 
 }

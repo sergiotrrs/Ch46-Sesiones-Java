@@ -51,7 +51,10 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public Customer createCustomer(Customer customer) {
-		// TODO Verificar si existe el email
+		Optional<Customer> optionalCustomer = customerRepository.findByEmail(customer.getEmail());
+		if( optionalCustomer.isPresent()) {
+			throw new IllegalStateException("Customer already exist with email " + customer.getEmail());
+		}
 		// TODO Verificar si los atributos son válidos
 		customer.setActive(true); // activar cliente
 		customer.setId(null); // forzar la creación del cliente		
