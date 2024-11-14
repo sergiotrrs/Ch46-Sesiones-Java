@@ -3,10 +3,12 @@ package com.superneto.app.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 /**
  *  @Entity se usa para marcar una clase como una entidad
@@ -19,6 +21,7 @@ import jakarta.persistence.Id;
  *  una fila en la tabla.
  */
 @Entity
+@Table(name="customers")
 public class Customer {
 	
 	// Indica que el atributo será la clave primaria
@@ -26,11 +29,17 @@ public class Customer {
 	// Indica como se generará automáticamente las claves primarias
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	@Column(name="fist_name", length=100, nullable=false)
 	private String firstName;
+	@Column(name="last_name", length=100, nullable=true)
 	private String lastName;
+	@Column(name="email", length=50, nullable=false, unique=true)
 	private String email;
+	@Column(name="active")
 	private boolean active;
+	@Column(name="birthdate")
 	private LocalDate birthDate;
+	@Column(name="created_at")
 	private LocalDateTime createdAt;
 	/*
 	@ManyToOne
