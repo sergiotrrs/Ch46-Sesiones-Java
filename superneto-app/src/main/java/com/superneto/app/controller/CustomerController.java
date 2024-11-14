@@ -1,9 +1,12 @@
 package com.superneto.app.controller;
 
+import java.util.Set;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.superneto.app.model.Customer;
@@ -65,6 +68,26 @@ public class CustomerController {
 	Customer getUserById(@PathVariable("id") Long id){
 		Customer existingCustomer = customerService.getCustomerById(id);
 		return existingCustomer;
+	}
+	
+	
+	/**
+	 * La anotación @RequestParam en Spring MVC se utiliza para 
+	 * extraer parámetros de consulta de una solicitud HTTP y 
+	 * vincularlos a los parámetros de un método del controlador. 
+	 * Los parámetros de consulta son aquellos que se encuentran 
+	 * en la URL después del signo de interrogación ? y suelen 
+	 * utilizarse para pasar datos adicionales en las solicitudes GET.
+	 */
+	@GetMapping // http:localhost:8080/api/v1/customers?active=false&size=10&firstname="Estafany"
+	Set<Customer> getAllUsers(
+			@RequestParam(
+					name="active", 
+					required = false,
+					defaultValue = "true"
+					) boolean active  
+			){
+		return customerService.getAllUsers(active);
 	}
 	
 
