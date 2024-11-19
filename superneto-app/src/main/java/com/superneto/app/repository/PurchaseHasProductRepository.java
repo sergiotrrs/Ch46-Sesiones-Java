@@ -1,6 +1,7 @@
 package com.superneto.app.repository;
 
 
+import java.time.LocalDateTime;
 import java.util.Set;
 
 import org.springframework.data.repository.CrudRepository;
@@ -24,6 +25,7 @@ import com.superneto.app.model.composite_key.PurchaseProductKey;
 public interface PurchaseHasProductRepository extends CrudRepository<PurchaseHasProduct, PurchaseProductKey> {
 
 	Set<PurchaseHasProduct> findAllByPurchaseId(@Param("purchase") Long purchaseId );
+	Set<PurchaseHasProduct> findAllByPurchasePurchaseDate(@Param("purchase-date") LocalDateTime purchaseDate );
 	void deleteByPurchaseIdAndProductId(@Param("purchase") Long purchaseId, @Param("product") Long productId);
 	
 }
