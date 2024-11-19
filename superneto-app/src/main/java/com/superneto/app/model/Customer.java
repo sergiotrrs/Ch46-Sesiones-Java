@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.Set;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -32,7 +33,7 @@ public class Customer {
 	// Indica como se generará automáticamente las claves primarias
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	@Column(name="fist_name", length=100, nullable=false)
+	@Column(name="first_name", length=100, nullable=false)
 	private String firstName;
 	@Column(name="last_name", length=100, nullable=true)
 	private String lastName;
@@ -47,7 +48,9 @@ public class Customer {
 	
 	@ManyToMany
 	@JoinTable(
-			name="customer_has_role"
+			name="customer_has_role",
+			joinColumns = @JoinColumn(name = "customer_id"),
+			inverseJoinColumns = @JoinColumn(name = "role_id")
 			)
 	private Set<Role> roles; 
 	
@@ -117,6 +120,14 @@ public class Customer {
 
 	public void setCreatedAt(LocalDateTime createdAt) {
 		this.createdAt = createdAt;
+	}
+		
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
 	}
 
 	@Override

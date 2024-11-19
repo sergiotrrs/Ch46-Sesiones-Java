@@ -103,6 +103,7 @@ public class CustomerServiceImpl implements CustomerService {
 		existingCustomer.setFirstName( customer.getFirstName() );
 		existingCustomer.setLastName( customer.getLastName() );
 		existingCustomer.setBirthDate( customer.getBirthDate() );
+		existingCustomer.setRoles( customer.getRoles() );
 		// ID y email no se permite modificar
 		return customerRepository.save(existingCustomer);
 	}
