@@ -14,3 +14,4 @@ INSERT INTO products(id, name, price) VALUES (2, 'Bicicleta', 5000.50);
 INSERT INTO purchases(id, fk_customer_id, purchase_date) VALUES (1, 1, '2024-11-08T11:13:14');
 
 INSERT INTO purchase_has_products(purchase_id, product_id, quantity, purchase_sold) VALUES (1, 1, 1, 26000.50);
+INSERT INTO purchase_has_products(purchase_id, product_id, quantity, purchase_sold) VALUES (1, 2, 2, 10001.00);
