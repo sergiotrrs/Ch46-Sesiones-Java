@@ -3,7 +3,7 @@ INSERT INTO roles(id, name, description) VALUES (1,'CUSTOMER', 'Cliente de la ec
 INSERT INTO roles(id, name, description) VALUES (2,'ADMIN', 'Administrador de la ecommerce');
 INSERT INTO roles(id, name, description) VALUES (3,'WAREHOUSE_MANAGER', 'Administrador del almacen');
 
-INSERT INTO customers(first_name, last_name, email, active) VALUES ('Bob', 'Esponja', 'esponja@nikelodeon.com', 1);
+INSERT INTO customers(first_name, last_name, email, active, password) VALUES ('Bob', 'Esponja', 'esponja@nikelodeon.com', 1, 'cangreburger');
 
 INSERT INTO customer_has_role(customer_id, role_id) VALUES (1, 1);
 INSERT INTO customer_has_role(customer_id, role_id) VALUES (1, 2);
