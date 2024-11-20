@@ -39,6 +39,8 @@ public class Customer {
 	private String lastName;
 	@Column(name="email", length=50, nullable=false, unique=true)
 	private String email;
+	@Column(name="password", length=100, nullable=true)
+	private String password;
 	@Column(name="active")
 	private boolean active;
 	@Column(name="birthdate")
@@ -128,6 +130,14 @@ public class Customer {
 
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override
