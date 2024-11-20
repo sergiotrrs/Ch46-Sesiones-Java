@@ -2,10 +2,13 @@ package com.superneto.app.service.impl;
 
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.superneto.app.model.Customer;
 import com.superneto.app.repository.CustomerRepository;
 import com.superneto.app.service.LoginCustomerService;
 
+@Service
 public class CustomerLoginServiceImpl implements LoginCustomerService {
 	
 	CustomerRepository customerRepository;
