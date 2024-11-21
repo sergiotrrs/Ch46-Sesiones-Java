@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+  <script type="module" crossorigin src="/assets/admin-sqFjY-Vx.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/navbar-app-DT60j2GN.js">
+  <link rel="modulepreload" crossorigin href="/assets/domainName-BqwKdE-m.js">
+  <link rel="stylesheet" crossorigin href="/assets/navbar-app-DmuC8Ewt.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header id="navbar-app"> </header>
+
+    <!-- main -->
+    <main>
+        <section class="container text-end mt-2">
+            <button id="logout" class="btn btn-dark">Logout</button>
+        </section>
+        <div id="loader" class="spinner-wrapper">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <section class="container mt-4">
+            <div id="list-container" class="row justify-content-center text-center"></div>
+        </section>
+
+        <!-- Mensaje de alerta -->
+        <div id="error-message" class="alert alert-warning my-2" role="alert" style="display: none;">
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer-app"></footer>
+
+</body>
+
+</html>
